@@ -1,0 +1,663 @@
+/*****! global styles *****/
+:root {
+  --main-color: #cbfe1c;
+  --main-bg-color: #0b0e13;
+  --sub-bg-color: #cbfe1c;
+  --p-color: #99a1af;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.main-bg-color {
+  background-color: var(--main-bg-color);
+}
+
+.sub-bg-color {
+  background-color: var(--sub-bg-color);
+}
+
+.p-color {
+  color: #99a1af;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+html::selection {
+  background-color: var(--sub-bg-color);
+  color: black;
+}
+
+h1,
+h2,
+h3,h4,h5,h6 {
+  font-family: "Days One", sans-serif;
+}
+/****! End global styles *****/
+
+/*****! navbar styles *****/
+
+.my-nav {
+  border-bottom: 1px solid #1e2939;
+}
+
+.my-nav .navbar-brand:hover {
+  color: var(--main-color);
+}
+
+.my-nav .navbar-brand {
+  cursor: auto;
+}
+
+.my-nav .nav-link {
+  color: white;
+  transition: color 0.2s;
+}
+
+.my-nav ul li .nav-link.active {
+  color: var(--main-color);
+}
+
+.my-nav .nav-link:hover {
+  color: var(--main-color);
+}
+
+.my-nav .navbar-toggler:hover{
+  color: var(--main-color) !important;
+}
+
+header button,
+.my-nav .navbar-collapse button,
+.contact-us .btn-send {
+  overflow: hidden;
+  position: relative;
+}
+
+header button:before,
+.my-nav .navbar-collapse button:before,
+.contact-us .btn-send:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: all 0.7s ease;
+}
+
+header button:hover,
+.my-nav .navbar-collapse button:hover,
+.contact-us .btn-send:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.096));
+}
+
+header button:hover:before,
+.my-nav .navbar-collapse button:hover:before,
+.contact-us .btn-send:hover:before {
+  left: 150%;
+}
+
+
+/****! End navbar styles *****/
+
+/****! header styles *****/
+
+header {
+  padding-top: 140px;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.884)), url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header .header-content .header-btns .second-button {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+header .header-content .header-btns .second-button:hover {
+  background-color: var(--sub-bg-color);
+  color: black;
+}
+
+header .header-content .header-image img {
+  border: 4px var(--main-color) solid;
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+}
+
+header .header-content .header-image .badge {
+  position: absolute;
+  top: 85%;
+  right: 78%;
+  border: 1px solid #364153;
+}
+
+
+@media screen and (max-width:992px) {
+
+  header .header-content .header-image img {
+
+  width: 100%;
+
+}
+  header .header-content .header-image{
+
+  margin-bottom: 80px;
+
+}
+  
+}
+@media screen and (max-width:576px) {
+
+
+
+
+  header .header-content h1{
+    font-size: 30px;
+  }
+  header .header-content p{
+    font-size: 12px;
+  }
+
+  header .header-content .header-image img {
+
+height: 250px;
+
+
+}
+  header .header-content .header-image{
+
+width: 95%;
+margin-inline: auto;
+
+}
+
+header .header-content .header-image .badge {
+  position: absolute;
+  top: 80%;
+  right: 60%;
+  
+  border: 1px solid #364153;
+}
+
+
+
+header .header-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+  
+}
+
+/****! End header styles *****/
+
+/****! Our Games styles *****/
+
+.our-games .section-heading p:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 3px;
+}
+
+.our-games .section-heading p:first-of-type::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, transparent, var(--main-color));
+}
+
+.our-games .section-heading p:first-of-type::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, var(--main-color), transparent);
+}
+.our-games .carousel .inner .inner-image img {
+  height: 300px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.our-games .carousel .inner .top-text {
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  left: 20px;
+  transform: translateY(-170%);
+  transition: 0.4s ease;
+}
+
+.our-games .carousel .inner .inner-image:hover .top-text {
+  transform: translateY(0);
+}
+
+.our-games .carousel .inner .bottom-text {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  left: 22px;
+  transform: translateY(170%);
+  transition: 0.4s ease;
+}
+
+.our-games .carousel .inner .inner-image:hover .bottom-text {
+  transform: translateY(0);
+}
+
+.our-games .carousel .inner:hover img {
+  border: 2px var(--main-color) solid;
+  transform: scale(1.1);
+}
+
+.our-games .carousel .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, var(--main-color));
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.inner:hover .overlay {
+  opacity: 1;
+}
+
+.carousel-item {
+  transition: transform 0.4s;
+}
+
+.our-games .carousel .circle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #2f3b52;
+  background-color: transparent;
+  color: #cbd5e1;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.our-games .carousel .circle-btn:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+.our-games .carousel .view-all-btn {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+.our-games .carousel .view-all-btn:hover {
+  background-color: var(--sub-bg-color);
+  color: black;
+}
+
+
+@media screen and (max-width:576px) {
+  
+  .our-games .carousel-buttons .view-all-btn{
+    width: 100%;
+
+  }
+}
+
+/****! End Our Games styles ****/
+
+/****! what we do styles *****/
+.about-us .section-heading .top:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 3px;
+}
+
+.about-us .section-heading .top:first-of-type::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, transparent, var(--main-color));
+}
+
+.about-us .section-heading .top:first-of-type::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, var(--main-color), transparent);
+}
+
+.about-us .cards .inner {
+  background-color: #1a1a1a;
+  border: 1px solid #364153;
+  padding: 60px 50px;
+  height: 300px;
+  transition: all 0.3s;
+}
+
+.about-us .cards .image-card {
+  height: 300px;
+}
+
+.about-us .cards .inner .icon {
+  width: fit-content;
+  padding: 20px 20px;
+  background-color: #1e2939;
+  transition: all 0.3s;
+}
+
+.about-us .inner .corner-top {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid var(--main-color);
+  rotate: 45deg;
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  transform: translate(-150px, -90px);
+  transition: all 0.3s;
+}
+.about-us .inner .corner-bottom {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid var(--main-color);
+  rotate: 45deg;
+  position: absolute;
+  bottom: 8px;
+  right: 15px;
+  transform: translate(150px, 90px);
+  transition: all 0.3s;
+}
+
+.about-us .inner:hover .corner-bottom,
+.about-us .inner:hover .corner-top {
+  transform: translate(0);
+}
+
+.about-us .inner:hover .icon {
+  background-color: var(--sub-bg-color);
+  color: #1e2939;
+}
+.about-us .inner:hover {
+  border: 1px solid var(--main-color);
+}
+
+.about-us .line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--main-color) 20%,
+    var(--main-color) 80%,
+    transparent
+  );
+  width: 80%;
+  max-width: 600px;
+  height: 2px;
+  box-shadow:
+    0 0 10px var(--main-color),
+    0 0 20px #cbfe1c4d;
+  margin: 60px auto;
+}
+
+.about-us .marquee {
+  overflow: hidden;
+  width: 97%;
+  margin: 0 auto;
+  background: radial-gradient(var(--main-color) 5%, transparent 70%);
+  padding: 70px 0;
+}
+
+.about-us .track1 {
+  animation: scroll 30s linear infinite;
+}
+.about-us .track2 {
+  animation: scroll 30s linear infinite reverse;
+}
+
+.about-us .marquee img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/****! End what we do styles *****/
+
+/*****! our team styles *****/
+
+.our-team .section-heading p:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 3px;
+}
+
+.our-team .section-heading p:first-of-type::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, transparent, var(--main-color));
+}
+
+.our-team .section-heading p:first-of-type::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, var(--main-color), transparent);
+}
+
+.our-team .inner {
+  cursor: pointer;
+  width: 95%;
+  margin-inline: auto;
+}
+.our-team .inner > .image-box img,
+.our-team .inner > .info {
+  filter: grayscale(100%);
+}
+.slider-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  transition: height 0.6s ease;
+  filter: grayscale(0%); 
+}
+
+.slider-overlay .image-box img,
+.slider-overlay .info {
+  width: 100%; 
+}
+
+.our-team .inner:hover .slider-overlay {
+  height: 100%;
+}
+
+.our-team .inner .image-box img {
+  height: 350px;
+}
+
+.our-team .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.our-team .left-text {
+  position: absolute;
+  bottom: 0;
+  max-width: 200px;
+}
+
+.right-text {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  transform: rotate(90deg);
+}
+
+/****! End our team styles *****/
+
+/*****! contact us styles *****/
+
+.contact-us .section-heading p:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 3px;
+}
+
+.contact-us .section-heading p:first-of-type::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, transparent, var(--main-color));
+}
+
+.contact-us .section-heading p:first-of-type::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(100deg, var(--main-color), transparent);
+}
+
+.contact-us {
+  background-color: #0e131e;
+}
+
+.contact-us .contact-box .contact-info {
+  width: 45%;
+}
+
+.contact-us .info-strip {
+  background-color: #1e2939;
+}
+
+
+.contact-us .contact-box .contact-info .icon{
+  width: 65px;
+  height: 65px;
+  transition: opacity 0.2s;
+}
+
+
+.contact-us .join-card {
+  background: linear-gradient(to right, var(--main-color), #05df72);
+}
+
+.contact-us .contact-box .join-card ul li a .icon{
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.2s;
+}
+.contact-us .contact-box .join-card ul li a .icon:hover{
+  opacity: 0.8;
+}
+.contact-us .contact-box form {
+  width: 50%;
+}
+
+.contact-us .contact-box form .contact-card {
+  background-color: #1e2939;
+}
+
+.contact-us .contact-box form .contact-input {
+  background-color: #364153;
+  border: 1px solid #2a3347;
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px 14px;
+  transition: border-color 0.2s;
+}
+
+.contact-us .contact-box form .contact-input::placeholder {
+  color: #5a6478;
+}
+
+.contact-us .contact-box form .contact-input:focus {
+  border-color: var(--main-color);
+  color: #fff;
+  box-shadow: none;
+}
+
+.contact-us .contact-box form .form-select.contact-input option {
+  background-color: #1e2535;
+}
+
+.contact-us .contact-box form .contact-check {
+  width: 18px;
+  height: 18px;
+  accent-color: blue;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-us .contact-box .contact-info {
+    width: 100%;
+  }
+
+  .contact-us .contact-box form {
+    width: 100%;
+  }
+}
+
+/****! End contact us styles *****/
+
+/*****! footer styles *****/
+
+footer ul li a:hover{
+  color: var(--main-color) !important;
+}
+footer ul li a i:hover{
+  color: var(--main-color) !important;
+}
+
+/****! End footer styles *****/
