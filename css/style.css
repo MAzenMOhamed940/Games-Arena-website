@@ -155,9 +155,22 @@ header .header-content .header-image .badge {
   width: 100%;
 
 }
-  header .header-content .header-image{
+ header{
+    min-height: 90vh;
+  }
 
-  margin-bottom: 80px;
+
+  
+}
+@media screen and (max-width:776px) {
+
+
+
+ 
+
+   header .header-content .header-image{
+
+  margin-bottom: 60px;
 
 }
   
