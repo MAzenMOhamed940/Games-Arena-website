@@ -472,15 +472,6 @@ header .header-btns {
 }
 
 
-@media screen and (max-width:576px) {
-
-  .about-us .cards h3{
-    font-size: 13px !important;
-    margin: 0 auto;
-
-  }
-}
-
 /****! End what we do styles *****/
 
 /*****! our team styles *****/
