@@ -320,8 +320,8 @@ header .header-btns {
   
   .our-games .carousel-buttons .view-all-btn{
     width: 100%;
-
   }
+
 }
 
 /****! End Our Games styles ****/
@@ -455,6 +455,16 @@ header .header-btns {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+
+@media screen and (max-width:576px) {
+
+  .about-us .cards h3{
+    font-size: 13px !important;
+    margin: 0 auto;
+
   }
 }
 
